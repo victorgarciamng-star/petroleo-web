@@ -335,7 +335,7 @@ new Chart(ctx, {
 function calc() {
   const amt = parseFloat(document.getElementById('calc-amount').value) || 0;
   const mos = parseInt(document.getElementById('calc-months').value) || 0;
-  const gain = amt * (Math.pow(1.30, mos) - 1);
+  const gain = amt * (Math.pow(1.75, mos) - 1);
   document.getElementById('calc-gain').textContent = '$' + Math.round(gain).toLocaleString();
   document.getElementById('calc-roi').textContent = Math.round((gain/amt)*100 || 0) + '%';
   document.getElementById('calc-total').textContent = '$' + Math.round(amt + gain).toLocaleString();
